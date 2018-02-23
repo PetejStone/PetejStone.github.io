@@ -1,0 +1,62 @@
+.alert {
+  @extend %center;
+  @include flexy(flex, row);
+  justify-content: space-between;
+  color: $white;
+  width: 90%;
+  border-radius: 5px;
+  background-color: $widget-color;
+  padding: .5em;
+  z-index: 500;
+  &--bell {
+    background-color: #69D36E;
+    width: 6em;
+    height: 3em;
+    position: absolute;
+    right: 15em;
+        & > p {
+          background-color: inherit;
+          margin: auto;
+          &:hover {
+            cursor: pointer;
+        }
+    }
+}
+  &--notification {
+    position: fixed;
+    top: 4px;
+    right: 236px;
+    width: 9em;
+    background-color: #69D36E;
+    @include mq(medium){
+      display: flex;
+      flex-direction: row;
+      width: 19em;
+      height: 3em;
+      z-index: 100;
+      top: 7px;
+      right: 15em;
+      align-items: center;
+    }
+      & > p {
+        margin: 0;
+        width: inherit;
+        padding-right: 3px;
+      }
+    }
+  &--invalid,
+  &--success,
+  &--empty {
+    position: fixed;
+    bottom: 50%;
+    height: 10em;
+    width: 75%;
+    @extend %center;
+}
+    &__close {
+      padding: 5px;
+      &:hover {
+        cursor: pointer;
+      }
+  }
+}

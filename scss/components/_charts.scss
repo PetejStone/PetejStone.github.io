@@ -1,0 +1,84 @@
+.chart-top {
+  @include flexy(flex, column);
+  @include mq(medium){
+    flex-direction: row;
+  }
+}
+
+.line-chart {
+  @extend %center;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 2em;
+  border-bottom: 1px solid $light-grey;
+  @include mq(medium){
+    margin-top: 3em;
+    margin: 0 auto;
+    width: 90%;
+    padding-bottom: 2em;
+    border-bottom: none;
+}}
+
+.chart-row {
+  @include mq(medium){
+  margin: 0 auto;
+  @include flexy(flex, row);
+  border-top: 1px solid $light-grey;
+  width: 90%;
+  border-bottom: 1px solid $light-grey;
+}
+}
+
+.bar-chart {
+  border-bottom: 1px solid $light-grey;
+  padding-bottom: 1em;
+  @include mq(medium){
+    width: 50%;
+    margin: 0 auto;
+    border-bottom: none;
+    padding-bottom: 0;
+    border-right: 1px solid $light-grey;
+
+}
+}
+.doughnut-chart {
+  border-bottom: 1px solid $light-grey;
+  @include mq(medium){
+    padding-left: 1em;
+    width: 50%;
+    border-bottom: none;
+}
+}
+
+.chartjsLegend li span {
+  right: 3em;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  border-radius: 5px;
+  @include mq(medium){
+    right: 3em;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    border-radius: 5px;
+}}
+
+.chartjsLegend li {
+  @include flexy(flex, column);
+  align-items: center;
+  @include mq(medium){
+    @include flexy(flex, row);
+  }
+}
+.chartjsLegend > ul {
+  @include flexy(flex, row);
+  justify-content: space-between;
+  padding: 0;
+  justify-content: space-around;
+  @include mq(medium){
+    @include flexy(flex, row);
+    justify-content: space-between;
+}}

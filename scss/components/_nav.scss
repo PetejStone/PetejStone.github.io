@@ -1,0 +1,56 @@
+.sidebar {
+  background-color: #5A4176;
+  padding: 1em;
+  height: 3.5em;
+  @include flexy(flex,row);
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+    @include mq(medium){
+      background-color: $sidebar-color;
+      @include flexy(flex, column);
+      justify-content: flex-start;
+      width: 4em;
+      height: 100%;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      padding-top: 4em;
+      z-index: 0;
+  }
+  &--icon:hover {
+    cursor: pointer;
+    padding-left: 5px;
+    border-left: 2px solid $notification-color;
+    transform: scale(1.5);
+    }
+  & > nav {
+    @include flexy(flex,row);
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 500px;
+      @include mq(medium){
+        @include flexy(flex,column);
+        margin: 0;
+        height: 100vh;
+        align-items: center;
+        justify-content: flex-start;
+        }
+      & > ul {
+      @include flexy(flex,row);
+      width: 100%;
+      padding: 0;
+      justify-content: space-around;
+      align-items: center;
+        @include mq(medium){
+          height: 35%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0;
+    }
+  }
+ }
+}//end  of sidebar class

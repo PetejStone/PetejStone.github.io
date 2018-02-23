@@ -1,0 +1,293 @@
+
+.header {
+  @include flexy(flex, row);
+  justify-content: space-between;
+  align-items: center;
+  background-color:  $main-color;
+  color: $white;
+  height: 4em;
+  position: relative;
+  z-index: 50;
+}
+
+.header__main {
+  margin: 1em;
+}
+
+.header__list {
+  padding-right: 1em;
+  @include flexy(flex, row);
+  align-items: center;
+}
+
+.bell {
+  margin-right: 2em;
+  padding-right: 1em;
+  border-right: 1px solid $black;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.notification {
+  background-color: $notification-color;
+  width: 3px;
+  height: 3px;
+  padding: 4px;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  top: 14px;
+  right: 202px;
+    &:hover {
+      cursor: pointer;
+    }
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: .5em;
+}
+
+
+
+main {
+  @include mq(medium){
+    margin-left: 64px;
+ }
+}
+
+.dashboard {
+  @include flexy(flex, column-reverse);
+  background-color: $white;
+  @include mq(medium){
+    max-width: 100%;
+    @include flexy(flex, row);
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+    &--tab {
+      display: none;
+      @include mq(medium){
+        margin: .5em;
+        max-width: 5em;
+        border-bottom: none;
+        display: inline;
+    }
+  }
+}
+
+
+.heading {
+  color: $light-grey;
+  @extend %center;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  text-align:center;
+  border-bottom: 1px solid $light-grey;
+  width: fit-content;
+  @include mq(medium){
+    text-align: left;
+    margin: 1em 0 0 0;
+    border-bottom: none;
+  }
+
+  &--social{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    @include mq(medium){
+      margin-left: 3em;
+    }
+  }
+  &--members {
+    @extend %center;
+    border-bottom: 1px solid $light-grey;
+    width: 11em;
+    padding: .5em;
+    @include mq(medium){
+      border-bottom: none;
+      margin-left: 1em;
+      margin-top: 5px;
+      padding: 0;
+
+    }
+  }
+}
+
+.chart-nav {
+  @include flexy(flex,row);
+  justify-content: space-around;
+  width: 100%;
+  @extend %center;
+  max-width: 500px;
+  @include flexy(flex, row);
+  padding: 1em 0 0 0;
+  @include mq(medium){
+    justify-content: flex-end;
+    max-width: 1400px;
+    margin: auto;
+}
+  & > :nth-child(3n){
+    background-color: $nav-highlight;
+    color: $white;
+    border-radius: 15px;
+  }
+    & li {
+      padding: 10px;
+      margin-left: 5px;
+      &:hover {
+        cursor: pointer;
+        background-color: $nav-highlight;
+        color: $white;
+        border-radius: 15px;
+      }
+    }
+}
+
+.icon {
+  background-color:  $main-color;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 50%;
+  border: 1px solid $light-grey;
+}
+
+.box {
+  border: 1px solid $light-grey;
+  padding: 2em;
+  width: 75%;
+  max-width: 500px;
+  background-color: #f9f9f9;
+  @extend %center;
+  margin-bottom: 1em;
+  @include flexy(flex, row);
+  justify-content: space-around;
+  @include mq(medium){
+    width: 30%;
+    min-width: 228px;
+    margin-right: 5px;
+    margin-bottom: 0;
+}
+}
+
+.social {
+  color:  $main-color;
+  margin: 0;
+  border-bottom: 1px solid $light-grey;
+  @include mq(medium) {
+    border-bottom: none;
+}
+}
+
+
+.new-members,
+.user {
+  width: 100%;
+  @include flexy(flex, column);
+}
+
+.user {
+  padding: 1em;
+}
+
+.recent-activity {
+  height: 20em;
+  width: 100%;
+}
+
+.member-row,
+.widget-row {
+  @include flexy(flex, column);
+  width: 100%;
+  @extend %center;
+  overflow: auto;
+  @include mq(medium){
+    @include flexy(flex,row);
+    width: 90%;
+  }
+  & > :first-child {
+    @include mq(medium){
+    border-right: 1px solid $light-grey;
+  }
+}
+}
+
+
+.widget-row {
+  border-top: 1px solid $light-grey;
+  @include mq(medium){
+    border-top: none;
+  }
+}
+
+
+
+.member {
+  @include flexy(flex, column);
+  align-items: center;
+  padding: .75em;
+  border-bottom: 1px solid $light-grey;
+  @include mq(medium){
+    @include flexy(flex, row);
+
+}
+  &--info {
+    @include flexy(flex, column);
+    border-bottom: none;
+    padding: 0;
+    margin-right: 0;
+    @include mq(medium){
+      @include flexy(flex, column);
+      align-items: flex-start;
+      margin-right: auto;
+  }
+
+}
+  &--img {
+    border-bottom: none;
+  }
+  &--email{
+    color: $widget-color;
+  }
+  &--arrow {
+    transform: rotate(90deg);
+    margin-top:5px;
+    @include mq(medium){
+      transform: rotate(0deg);
+      margin-top: 0;
+      margin-left: auto;
+
+    }
+  }
+  & > img {
+    border-radius: 50%;
+  }
+
+}
+
+.error--box {
+  height: 5em;
+}
+
+
+.ui-autocomplete {
+max-height: 100px;
+width: 5em;
+overflow-y: auto;
+border-left: 1px solid black;
+border-bottom: 1px solid black;
+border-right: 1px solid black;
+background-color: white;
+text-align: left;
+padding: 0;
+/* prevent horizontal scrollbar */
+overflow-x: hidden;
+}
+
+//Hides appended DIV that appears at bottom of page when a user searches for a member
+.ui-helper-hidden-accessible {
+  display: none;
+}
