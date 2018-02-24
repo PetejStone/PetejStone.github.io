@@ -401,7 +401,7 @@ nav {
   display: flex;
   flex-direction: row;
   background-color: #000;
-  opacity: .1;
+  opacity: .8;
   justify-content: space-around;
   color: #fff;
   margin-top: 1em; }
@@ -420,9 +420,11 @@ nav {
   .nav-bar > li a {
     color: #fff;
     padding: 0 1em; }
-  @media (min-width: 750px) {
-    .nav-bar {
-      width: 35%; } }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%; }
 
 .project-title {
   font-size: 1em;
