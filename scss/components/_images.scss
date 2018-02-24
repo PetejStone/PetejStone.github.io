@@ -1,0 +1,18 @@
+
+.profile-pic {
+  width: 35%;
+  height: auto;
+  display: block;
+  @extend %center;
+  border-radius: 50%;
+  max-width: 900px;
+
+}
+
+.project-image {
+  width: 90%;
+  display: block;
+  @extend %center;
+  border-radius: 10px;
+
+}

@@ -7,15 +7,15 @@ $widget-color: #7F54B0;
 $sidebar-color: #5A4176;
 $traffic-color: #BFA2D7;
 $btn-grey: #B2AFB6;
-$graph-color-one: #7DD4A1;
+$green: #7DD4A1;
 $graph-color-two: #7496B4;
 $nav-highlight: #69D36E;
 $white: #fff;
 $black: #000;
-$notification-color: #2BE934;
+$light-green: #2BE934;
 $red: #FF0000;
 $light-grey: #d1d1d1;
-$dashboard-font: #808080;
+$grey: #808080;
 $dash-background: #F5F5F4;
 $border-color: #9E9E9E;
 
@@ -117,9 +117,9 @@ $letter-space    : 1px;
 //===============
 
 
-$brkpoint-sm: 320px;
-$brkpoint-med: 768px;
-$brkpoint-lg: 1024px;
+$brkpoint-sm: 500px;
+$brkpoint-med: 750px;
+$brkpoint-lg: 950px;
 
 //============
 //Grid system

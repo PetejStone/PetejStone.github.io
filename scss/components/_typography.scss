@@ -1,87 +1,12 @@
-body {
-  font-family: $helvetica-font-stack;
-}
 
-.title-one,
-.dashboard,
-.heading,
-.chart-nav,
-.chartjsLegend li,
-.social,
-.ui-autocomplete
- {
-  font-weight: $font-weight--medium;
-}
-
-
-
-.title-two,
-.nav__item,
-.name,
-.alert,
-.stats {
-  font-weight: $font-weight--thin;
-}
-
-button {
-  font-weight: $font-weight--bold;
-  letter-spacing: 1px;
-}
-
-.name {
-  letter-spacing: 1.2px;
-}
-
-.alert {
-  &--bell > p {
-    font-size: 12px;
-    letter-spacing:.75px;
-  }
-  &--notification > p{
-    font-size: 12px;
-  }
-  &--invalid,
-  &--success,
-  &--empty {
-    & > p {
-      font-size: 2em;
-      text-align: center;
-  }
-}
-}
-
-.ui-autocomplete {
-  font-size: .85em;
-}
-
-.header__list > li {
+.project-title {
   font-size: 1em;
+  text-align: center;
 }
 
-.stats {
-  font-size: 2em;
-}
+.card-text {
 
-.member > p, {
-  font-size: 12px;
-  margin: 0;
-  &.date {
-    margin-left: auto;
-  }
-}
-
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder,
-.slider:after {
-  font-size: 12px;
-}
+  text-align: center;
 
 
-.search-user > input,
-textarea {
-  font-size: 1.2em;
-}
-
-.time {
-  font-weight: $font-weight--bold;
 }

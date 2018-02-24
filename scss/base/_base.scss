@@ -6,3 +6,15 @@ ul {
   text-decoration: none;
   list-style-type: none;
 }
+
+a {
+  text-decoration: none;
+  color: $black;
+}
+
+body {
+  font-family: $helvetica-font-stack;
+  max-width: 1200px;
+  @extend %center;
+
+}
