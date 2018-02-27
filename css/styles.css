@@ -574,4 +574,10 @@ h2 {
     #right-arrow {
       font-size: .7em; } }
 
+.disabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0;
+  color: green; }
+
 /*# sourceMappingURL=styles.css.map */

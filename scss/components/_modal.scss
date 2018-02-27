@@ -103,3 +103,10 @@
 //     right: 225px;
 //   }
 // }
+
+.disabled {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0;
+    color: green;
+    }

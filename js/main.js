@@ -6,6 +6,7 @@ const card = document.getElementsByClassName('card');
 const leftArrow = document.getElementById('left-arrow');
 const rightArrow = document.getElementById('right-arrow');
 let counter = 0;
+
 //sticky nav
 window.onscroll = function() {myFunction()};
 
@@ -49,53 +50,43 @@ for (let i=0; i<card.length; i+=1) {
     }
 
 
-      if (counter === 0) {
-        leftArrow.style.opacity = 0;
-        leftArrow.style.cursor = 'default';
-      } else {
-        leftArrow.style.opacity = 1;
-        leftArrow.style.cursor = 'pointer';
+
 
         leftArrow.addEventListener('click', ()=> {
           counter += -1;
-          modalCard[counter + 1].nextElementSibling.style.display = 'none'; //previous right slide disappears
+          console.log(counter);
+          if (counter === 0) {
+            leftArrow.className = 'disabled';
+          }
+          modalCard[counter + 1].nextElementSibling ? modalCard[counter + 1].nextElementSibling.style.display = 'none' : null; //previous right slide disappears
           modalCard[counter + 1].style.transform = 'translate(75%, -50%)' //current slide move right
           modalCard[counter].style.transform = 'translate(-50%, -50%)'; //left slide move to center
           modalCard[counter].previousElementSibling.style.display = 'flex'; //display new left slide
           modalCard[counter].previousElementSibling.style.transform = 'translate(-175%, -50%)'; //set new left slide to left position
 
-          if (counter === 0) {
-            leftArrow.style.opacity = 0;
 
-          }
         });
 
-      }
 
-      if (counter === 11) {
-        rightArrow.style.opacity = 0;
-        rightArrow.style.cursor = 'default';
-      } else {
-        rightArrow.style.opacity = 1;
-        rightArrow.style.cursor = 'pointer';
+
+
 
         rightArrow.addEventListener('click', ()=> {
           counter += 1;
-          modalCard[counter - 1].previousElementSibling.style.display = 'none'; //previous left slide disappears
+          if (counter === 11) {
+            rightArrow.className = 'disabled';
+          }
+          modalCard[counter - 1].previousElementSibling ? modalCard[counter - 1].previousElementSibling .style.display = 'none' : null; //previous left slide disappears
           modalCard[counter - 1].style.transform = 'translate(-175%, -50%)' //current slide move left
           modalCard[counter].style.transform = 'translate(-50%, -50%)'; //right slide move to center
           modalCard[counter].nextElementSibling.style.display = 'flex'; //display new right slide
           modalCard[counter].nextElementSibling.style.transform = 'translate(75%, -50%)'; //set new right slide to right position
 
-          if (counter === 11) {
-            rightArrow.style.opacity = 0;
 
-          }
         });
 
 
 
-      }
 
 
 
