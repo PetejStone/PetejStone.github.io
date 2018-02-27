@@ -33,7 +33,7 @@ function myFunction() {
 //Modal Overlay appear on click
 
 for (let i=0; i<card.length; i+=1) {
-  card[i].addEventListener('click', ()=> {
+  card[i].addEventListener('click', (e)=> {
     counter += i;
     console.log(counter);
     overlay.style.display = "flex";
@@ -49,10 +49,18 @@ for (let i=0; i<card.length; i+=1) {
       modalCard[counter].nextElementSibling.style.transform = 'translate(75%, -50%)';
     }
 
+    if (i===0) {
+      leftArrow.className = 'disabled';
+    }
+
+    if (i === card.length -1) {
+      rightArrow.className = 'disabled';
+    }
 
 
 
         leftArrow.addEventListener('click', ()=> {
+          rightArrow.className = 'active';
           counter += -1;
           console.log(counter);
           if (counter === 0) {
@@ -72,8 +80,9 @@ for (let i=0; i<card.length; i+=1) {
 
 
         rightArrow.addEventListener('click', ()=> {
+          leftArrow.className = 'active';
           counter += 1;
-          if (counter === 11) {
+          if (counter === modalCard.length -1) {
             rightArrow.className = 'disabled';
           }
           modalCard[counter - 1].previousElementSibling ? modalCard[counter - 1].previousElementSibling .style.display = 'none' : null; //previous left slide disappears

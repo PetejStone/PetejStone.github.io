@@ -561,7 +561,8 @@ h2 {
       width: 55%; } }
 
 #left-arrow,
-#right-arrow {
+#right-arrow,
+.active {
   cursor: pointer;
   margin: 0;
   padding: 0;
@@ -571,7 +572,8 @@ h2 {
   font-size: .4em; }
   @media (min-width: 500px) {
     #left-arrow,
-    #right-arrow {
+    #right-arrow,
+    .active {
       font-size: .7em; } }
 
 .disabled {
