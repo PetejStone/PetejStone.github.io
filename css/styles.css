@@ -498,6 +498,9 @@ h2 {
   animation: pulse .3s;
   box-shadow: 3px 5px 7px #000; }
 
+.card {
+  transition: box-shadow .2s ease-out; }
+
 #overlay {
   display: flex;
   flex-direction: column;
@@ -575,6 +578,9 @@ h2 {
     #right-arrow,
     .active {
       font-size: .7em; } }
+
+.modal-card {
+  transition: transform .3s ease-in-out 0s; }
 
 .disabled {
   pointer-events: none;

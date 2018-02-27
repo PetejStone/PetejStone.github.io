@@ -79,6 +79,10 @@
 
 }
 
+.modal-card {
+  transition: transform .3s ease-in-out 0s;
+}
+
 // #left-arrow {
 //   left: 10px;
 //   @include mq(small){
