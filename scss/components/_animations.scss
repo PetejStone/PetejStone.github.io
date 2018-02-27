@@ -1,0 +1,26 @@
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    transition: transform ease-in-out;
+    box-shadow: 3px 5px 7px $black;
+  }
+
+  50% {
+    transform: scale(1.1);
+    transition: transform ease-in-out;
+    box-shadow: 3px 5px 7px $black;
+  }
+  100%{
+    transform: scale(1);
+    transition: transform ease-in-out;
+    box-shadow: 3px 5px 7px $black;
+  }
+}
+
+
+
+.card:hover {
+  animation: pulse .3s;
+  box-shadow: 3px 5px 7px $black;
+
+}

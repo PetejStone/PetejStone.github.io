@@ -1,0 +1,105 @@
+#overlay {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  color: #FFFFFF;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 5px;
+  font-size: 5em;
+  background-color: #000;
+  opacity: .75;
+}
+
+.modal-card {
+    position: fixed;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 5px solid $green;
+    display: fixed;
+    flex-direction: column;
+    align-items: flex-start;
+    align-items: center;
+    padding: 1em 2em;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    max-width: 500px;
+    @include mq(small) {
+      width: 60%;
+    }
+    @include mq(medium) {
+      width: 50%;
+    }
+    @include mq(large) {
+      width: 40%;
+    }
+}
+
+.modal-card-text {
+  text-align: center;
+}
+
+.arrow-container {
+  @include flexy(flex, row, null, space-between);
+  width: 95%;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 750px;
+  @include mq(small) {
+    width: 85%;
+  }
+  @include mq(medium) {
+    width: 70%;
+  }
+  @include mq(large) {
+    width: 55%;
+  }
+
+}
+
+#left-arrow,
+#right-arrow {
+  cursor: pointer;
+  margin: 0;
+  padding:0;
+  display: table;
+  text-align: center;
+  transform: translate(0%, 0%);
+  font-size: .4em;
+  @include mq(small){
+    font-size: .7em;
+  }
+
+}
+
+// #left-arrow {
+//   left: 10px;
+//   @include mq(small){
+//     left: 50px;
+//   }
+//   @include mq(medium) {
+//     left: 125px;
+//   }
+//   @include mq(large) {
+//     left: 225px;
+//   }
+// }
+//
+// #right-arrow {
+//   right: 10px;
+//   @include mq(small) {
+//     right: 50px;
+//   }
+//   @include mq(medium) {
+//     right: 125px;
+//   }
+//   @include mq(large) {
+//     right: 225px;
+//   }
+// }
