@@ -620,4 +620,10 @@ h2 {
 .center {
   transform: translate(-50%, -50%); }
 
+.close-button {
+  width: 100%;
+  color: #fff;
+  text-align: left;
+  transform: translate(-22%, -325%); }
+
 /*# sourceMappingURL=styles.css.map */

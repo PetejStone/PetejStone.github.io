@@ -5,6 +5,7 @@ const modalCard = document.getElementsByClassName('modal-card');
 const card = document.getElementsByClassName('card');
 const leftArrow = document.getElementById('left-arrow');
 const rightArrow = document.getElementById('right-arrow');
+const closeButton = document.querySelector('.close-button');
 let counter = 0;
 
 //media query variables
@@ -37,13 +38,14 @@ function myFunction() {
 //Modal Overlay appear on click
 
 for (let i=0; i<card.length; i+=1) { //loops through card list
+
   card[i].addEventListener('click', (e)=> {
     counter += i;  //counter is set to the index value of the card clicked
     console.log(counter);
     overlay.style.display = "flex";   //when clicked, overlay modal appears
     modalCard[counter].style.display = 'flex'; //--
-
     modalCard[i].classList.add('center');
+    modalCard[i].insertAdjacentHTML('afterbegin','<p class="close-button">x</p>');
 
     if (modalCard[counter].previousElementSibling !== null)  { //if a previous sibling exists, display it offscreen to the left
       modalCard[counter].previousElementSibling.style.display = 'flex';
@@ -91,12 +93,13 @@ for (let i=0; i<card.length; i+=1) { //loops through card list
           //
           // // Current Card slides to the right partial view
           modalCard[counter + 1].classList.remove('center');//current slide move right ///   2
+          modalCard[counter + 1].children[0].classList.remove('close-button');
           modalCard[counter + 1].classList.add('right-cards');//current slide move right ///   2
 
           // Current Left Card slides to center and class is removed
           modalCard[counter].classList.remove('left-cards'); /// 1
           modalCard[counter].classList.add('center'); //current left slide move to center
-
+          modalCard[counter].insertAdjacentHTML('afterbegin','<p class="close-button">x</p>');
           // New Card appears in partial view to the left
           modalCard[counter].previousElementSibling ? modalCard[counter].previousElementSibling.classList.remove('offscreen-left') : null;
           modalCard[counter].previousElementSibling ? modalCard[counter].previousElementSibling.classList.add('left-cards') : null ;
@@ -121,11 +124,13 @@ for (let i=0; i<card.length; i+=1) { //loops through card list
           //
           // // Current Card slides to the left partial view
           modalCard[counter - 1].classList.remove('center');//current slide move right ///   2
+          modalCard[counter - 1].children[0].classList.remove('close-button');
           modalCard[counter - 1].classList.add('left-cards');//current slide move right ///   2
 
           // Current Right Card slides to center and class is removed
           modalCard[counter].classList.remove('right-cards'); /// 1
           modalCard[counter].classList.add('center'); //current left slide move to center
+          modalCard[counter].insertAdjacentHTML('afterbegin','<p class="close-button">x</p>');
 
           // New Card appears in partial view to the right
           modalCard[counter].nextElementSibling ? modalCard[counter].nextElementSibling.classList.remove('offscreen-right') : null;

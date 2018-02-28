@@ -44,6 +44,7 @@
   text-align: center;
 }
 
+
 .arrow-container {
   @include flexy(flex, row, null, space-between);
   width: 95%;
@@ -128,4 +129,11 @@
 
 .center {
   transform: translate(-50%, -50%);
+}
+
+.close-button {
+  width: 100%;
+  color: $white;
+  text-align: left;
+  transform: translate(-22%, -325%);
 }
