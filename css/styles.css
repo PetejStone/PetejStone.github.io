@@ -612,10 +612,10 @@ h2 {
       transform: translate(110%, -50%); } }
 
 .offscreen-right {
-  transform: translate(190%, -50%); }
+  transform: translate(500%, -50%); }
 
 .offscreen-left {
-  transform: translate(-290%, -50%); }
+  transform: translate(-500%, -50%); }
 
 .center {
   transform: translate(-50%, -50%); }
