@@ -27,7 +27,6 @@
     z-index: 1;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
     width: 75%;
     max-width: 500px;
     @include mq(small) {
@@ -83,35 +82,50 @@
   transition: transform .3s ease-in-out 0s;
 }
 
-// #left-arrow {
-//   left: 10px;
-//   @include mq(small){
-//     left: 50px;
-//   }
-//   @include mq(medium) {
-//     left: 125px;
-//   }
-//   @include mq(large) {
-//     left: 225px;
-//   }
-// }
-//
-// #right-arrow {
-//   right: 10px;
-//   @include mq(small) {
-//     right: 50px;
-//   }
-//   @include mq(medium) {
-//     right: 125px;
-//   }
-//   @include mq(large) {
-//     right: 225px;
-//   }
-// }
-
 .disabled {
     pointer-events: none;
     cursor: default;
     opacity: 0;
     color: green;
     }
+
+//Modal carousel media query
+
+.left-cards {
+  transform: translate(-170%, -50%);
+  @include mq(small) {
+    transform: translate(-175%, -50%);
+  }
+  @include mq(medium) {
+    transform: translate(-185%, -50%);
+  }
+  @include mq(large) {
+    transform: translate(-210%, -50%);
+  }
+
+}
+
+.right-cards {
+  transform: translate(70%, -50%);
+  @include mq(small) {
+    transform: translate(75%, -50%);
+  }
+  @include mq(medium) {
+    transform: translate(85%, -50%);
+  }
+  @include mq(large) {
+    transform: translate(110%, -50%);
+  }
+}
+
+.offscreen-right {
+  transform: translate(190%, -50%);
+}
+
+.offscreen-left {
+  transform: translate(-290%, -50%);
+}
+
+.center {
+  transform: translate(-50%, -50%);
+}

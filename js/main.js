@@ -7,6 +7,9 @@ const leftArrow = document.getElementById('left-arrow');
 const rightArrow = document.getElementById('right-arrow');
 let counter = 0;
 
+//media query variables
+
+
 //sticky nav
 window.onscroll = function() {myFunction()};
 
@@ -30,6 +33,7 @@ function myFunction() {
 //end of sticky nav
 
 
+
 //Modal Overlay appear on click
 
 for (let i=0; i<card.length; i+=1) { //loops through card list
@@ -39,22 +43,24 @@ for (let i=0; i<card.length; i+=1) { //loops through card list
     overlay.style.display = "flex";   //when clicked, overlay modal appears
     modalCard[counter].style.display = 'flex'; //--
 
+    modalCard[i].classList.add('center');
+
     if (modalCard[counter].previousElementSibling !== null)  { //if a previous sibling exists, display it offscreen to the left
       modalCard[counter].previousElementSibling.style.display = 'flex';
-      modalCard[counter].previousElementSibling.style.transform = 'translate(-190%, -50%)'; //left screen placement
+      modalCard[counter].previousElementSibling.classList.add('left-cards'); //left screen placement
         if (modalCard[counter].previousElementSibling.previousElementSibling !==null) {
           modalCard[counter].previousElementSibling.previousElementSibling.style.display = 'flex';
-          modalCard[counter].previousElementSibling.previousElementSibling.style.transform = 'translate(-290%, -50%)'; //right screen p
+          modalCard[counter].previousElementSibling.previousElementSibling.classList.add('offscreen-left');
       }
     }
 
 
     if (modalCard[counter].nextElementSibling !== null ) { //if a next sibling exists, display it offscreen to the right
       modalCard[counter].nextElementSibling.style.display = 'flex';
-      modalCard[counter].nextElementSibling.style.transform = 'translate(90%, -50%)'; //right screen placement
+      modalCard[counter].nextElementSibling.classList.add('right-cards'); //right screen placement
       if (modalCard[counter].nextElementSibling.nextElementSibling !==null) {
         modalCard[counter].nextElementSibling.nextElementSibling.style.display = 'flex';
-        modalCard[counter].nextElementSibling.nextElementSibling.style.transform = 'translate(190%, -50%)'; //right screen p
+        modalCard[counter].nextElementSibling.nextElementSibling.classList.add('offscreen-right')
       }
     }
 
@@ -78,13 +84,27 @@ for (let i=0; i<card.length; i+=1) { //loops through card list
           if (counter === 0) {
             leftArrow.className = 'disabled'; //if the index value is 0 (the first element), then reset the left arrow to disabled
           }
-          modalCard[counter + 1].nextElementSibling ? modalCard[counter + 1].nextElementSibling.style.transform = 'translate(190%, -50%)' : null; //previous right rotates off screen to the right
-          modalCard[counter + 1].style.transform = 'translate(90%, -50%)' //current slide move right
-          modalCard[counter + 1].previousElementSibling.previousElementSibling ? modalCard[counter + 1].previousElementSibling.previousElementSibling.style.transform = 'translate(-190%, -50%)' : null; //two slides previous moves to the partial view on the left
-          modalCard[counter].style.transform = 'translate(-50%, -50%)'; //current left slide move to center
-          modalCard[counter].previousElementSibling.previousElementSibling.style.display = 'flex'; //set new left slide to left position
-          modalCard[counter].previousElementSibling.previousElementSibling.style.transform = 'translate(-290%, -50%)';
 
+          // Current Right Card sides out of view to the right
+          modalCard[counter + 1].nextElementSibling ? modalCard[counter + 1].nextElementSibling.classList.remove('right-cards') : null;
+          modalCard[counter + 1].nextElementSibling ? modalCard[counter + 1].nextElementSibling.classList.add('offscreen-right') : null;
+          //
+          // // Current Card slides to the right partial view
+          modalCard[counter + 1].classList.remove('center');//current slide move right ///   2
+          modalCard[counter + 1].classList.add('right-cards');//current slide move right ///   2
+
+          // Current Left Card slides to center and class is removed
+          modalCard[counter].classList.remove('left-cards'); /// 1
+          modalCard[counter].classList.add('center'); //current left slide move to center
+
+          // New Card appears in partial view to the left
+          modalCard[counter].previousElementSibling ? modalCard[counter].previousElementSibling.classList.remove('offscreen-left') : null;
+          modalCard[counter].previousElementSibling ? modalCard[counter].previousElementSibling.classList.add('left-cards') : null ;
+
+
+          //New Card appears offscreen-left
+          modalCard[counter].previousElementSibling.previousElementSibling ? modalCard[counter].previousElementSibling.previousElementSibling.style.display = 'flex' : null
+          modalCard[counter].previousElementSibling.previousElementSibling ? modalCard[counter].previousElementSibling.previousElementSibling.classList.add('offscreen-left') : null;
 
         });
 
@@ -95,14 +115,26 @@ for (let i=0; i<card.length; i+=1) { //loops through card list
           if (counter === modalCard.length -1) {
             rightArrow.className = 'disabled'; //if the index value is the last child,  then reset the right arrow to disabled
           }
-          modalCard[counter - 1].previousElementSibling ? modalCard[counter - 1].previousElementSibling .style.transform = 'translate(-290%, -50%)' : null; //previous left slide disappears only if it exists
-          modalCard[counter - 1].style.transform = 'translate(-190%, -50%)'; //current slide move left
-          modalCard[counter - 1].nextElementSibling.nextElementSibling ? modalCard[counter - 1].nextElementSibling.nextElementSibling.style.transform = 'translate(90%, -50%)' : null;
-          modalCard[counter].style.transform = 'translate(-50%, -50%)'; //right slide move to center
-          modalCard[counter].nextElementSibling.nextElementSibling.style.display = 'flex'; //display new right slide
-          modalCard[counter].nextElementSibling.nextElementSibling.style.transform = 'translate(190%, -50%)'; //set new right slide to right position
+          // Current Left Card sides out of view to the left
+          modalCard[counter -1].previousElementSibling ? modalCard[counter -1].previousElementSibling.classList.remove('left-cards') : null;
+          modalCard[counter -1].previousElementSibling ? modalCard[counter -1].previousElementSibling.classList.add('offscreen-left') : null;
+          //
+          // // Current Card slides to the left partial view
+          modalCard[counter - 1].classList.remove('center');//current slide move right ///   2
+          modalCard[counter - 1].classList.add('left-cards');//current slide move right ///   2
+
+          // Current Right Card slides to center and class is removed
+          modalCard[counter].classList.remove('right-cards'); /// 1
+          modalCard[counter].classList.add('center'); //current left slide move to center
+
+          // New Card appears in partial view to the right
+          modalCard[counter].nextElementSibling ? modalCard[counter].nextElementSibling.classList.remove('offscreen-right') : null;
+          modalCard[counter].nextElementSibling ? modalCard[counter].nextElementSibling.classList.add('right-cards') : null;
 
 
+          //New Card appears offscreen-right
+          modalCard[counter].nextElementSibling.nextElementSibling ? modalCard[counter].nextElementSibling.nextElementSibling.style.display = 'flex' : null ;
+          modalCard[counter].nextElementSibling.nextElementSibling ? modalCard[counter].nextElementSibling.nextElementSibling.classList.add('offscreen-right') : null;
         });
 
 
