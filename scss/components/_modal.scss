@@ -11,7 +11,7 @@
   border-radius: 5px;
   font-size: 5em;
   background-color: #000;
-  opacity: .75;
+  opacity: 0;
   z-index: 55;
 }
 
@@ -80,9 +80,7 @@
 
 }
 
-.modal-card {
-  transition: transform .3s ease-in-out 0s;
-}
+
 
 .disabled {
     pointer-events: none;

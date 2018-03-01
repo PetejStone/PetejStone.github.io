@@ -28,3 +28,12 @@
 .card {
   transition: box-shadow .2s ease-out;
 }
+
+.modal-card {
+  transition: transform .3s ease-in-out 0s;
+}
+
+#overlay {
+
+  transition: opacity .25s ease-in-out;
+}

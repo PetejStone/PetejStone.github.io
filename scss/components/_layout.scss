@@ -42,7 +42,21 @@ h2 {
 
 }
 
-.close {
-  z-index: 999;
-  color: white;
+.contact {
+  margin: 0 1em;
+}
+.contact-list {
+  padding: 0;
+  @include flexy(flex, column);
+  @include mq(small) {
+    @include flexy(flex, row, null, space-around);
+  }
+
+}
+.contact-item {
+  display: inline-block;
+  text-align: center;
+  & > p:nth-child(2n+1) {
+  font-weight: $font-weight--bold;
+ }
 }

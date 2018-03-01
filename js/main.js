@@ -45,7 +45,8 @@ for (let i=0; i<card.length; i+=1) { //loops through card list
     counter += i;  //counter is set to the index value of the card clicked
     console.log(counter);
     overlay.style.display = "flex";   //when clicked, overlay modal appears
-
+    overlay.style.opacity = .75;
+    overlay.style.transition = 'opacity .3s ease-in 3s';
     modalCard[counter].style.display = 'flex'; //--
     modalCard[counter].classList.add('center');
     modalCard[counter].children[0].innerHTML = "close";
@@ -170,6 +171,8 @@ counter = 0;
 for (i=0; i<modalCard.length; i+=1) {
 closeButton[i].addEventListener('click', () => {
   overlay.style.display = 'none';
+  overlay.style.opacity = .75;
+
   modalCard[counter].children[0].innerHTML = '';
   counter = 0;
   console.log(counter);

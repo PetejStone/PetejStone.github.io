@@ -16,6 +16,9 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   max-width: 1200px; }
 
+p {
+  text-align: center; }
+
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -431,6 +434,10 @@ nav {
   font-size: 1em;
   text-align: center; }
 
+.site-link {
+  font-weight: 700;
+  text-decoration: underline; }
+
 .intro,
 main {
   margin: 0 1em;
@@ -469,9 +476,24 @@ h2 {
     .card {
       width: 23%; } }
 
-.close {
-  z-index: 999;
-  color: white; }
+.contact {
+  margin: 0 1em; }
+
+.contact-list {
+  padding: 0;
+  display: flex;
+  flex-direction: column; }
+  @media (min-width: 500px) {
+    .contact-list {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around; } }
+
+.contact-item {
+  display: inline-block;
+  text-align: center; }
+  .contact-item > p:nth-child(2n+1) {
+    font-weight: 700; }
 
 .profile-pic {
   width: 35%;
@@ -505,6 +527,12 @@ h2 {
 .card {
   transition: box-shadow .2s ease-out; }
 
+.modal-card {
+  transition: transform .3s ease-in-out 0s; }
+
+#overlay {
+  transition: opacity .25s ease-in-out; }
+
 #overlay {
   display: flex;
   flex-direction: column;
@@ -518,7 +546,7 @@ h2 {
   border-radius: 5px;
   font-size: 5em;
   background-color: #000;
-  opacity: .75;
+  opacity: 0;
   z-index: 55; }
 
 .modal-card {
@@ -582,9 +610,6 @@ h2 {
     #right-arrow,
     .active {
       font-size: .7em; } }
-
-.modal-card {
-  transition: transform .3s ease-in-out 0s; }
 
 .disabled {
   pointer-events: none;
