@@ -1,22 +1,136 @@
 <!DOCTYPE html>
+
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peter Stone Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
+
+
+    <script
+    src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+
+    <script
+    src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+    integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+    crossorigin="anonymous"></script>
+
+    <script src="js/jquery.scrollSlide.js"></script>
+
+    <script>
+    $(document).ready(function(){
+        $('.slide-left-0').scrollSlide({
+            direction   : 'left',
+            scrollstart : 0
+        });
+
+        $('.slide-right-0').scrollSlide({
+            direction   : 'right',
+            scrollstart : 0
+        });
+
+    		$('.slide-left-50').scrollSlide({
+				    direction   : 'left',
+				    scrollstart : 200
+				});
+
+				$('.slide-right-200').scrollSlide({
+				    direction   : 'right',
+				    scrollstart : 200
+				});
+
+				$('.slide-right-300').scrollSlide({
+				    direction   : 'right',
+				    scrollstart : 300
+				});
+
+        $('.slide-left-400').scrollSlide({
+				    direction   : 'left',
+				    scrollstart : 400
+				});
+
+        $('.slide-down-400').scrollSlide({
+				    direction   : 'down',
+				    scrollstart : 400
+				});
+
+        $('.slide-right-400').scrollSlide({
+				    direction   : 'right',
+				    scrollstart : 400
+				});
+        $('.slide-left-500').scrollSlide({
+				    direction   : 'left',
+				    scrollstart : 500
+				});
+
+        $('.slide-down-500').scrollSlide({
+				    direction   : 'down',
+				    scrollstart : 500
+				});
+
+        $('.slide-right-500').scrollSlide({
+				    direction   : 'right',
+				    scrollstart : 500
+				});
+        $('.slide-left-600').scrollSlide({
+				    direction   : 'left',
+				    scrollstart : 700
+				});
+
+        $('.slide-down-600').scrollSlide({
+				    direction   : 'down',
+				    scrollstart : 600
+				});
+
+        $('.slide-right-600').scrollSlide({
+				    direction   : 'right',
+				    scrollstart : 600
+				});
+        $('.slide-left-700').scrollSlide({
+				    direction   : 'left',
+				    scrollstart : 700
+				});
+
+        $('.slide-down-700').scrollSlide({
+				    direction   : 'down',
+				    scrollstart : 700
+				});
+
+        $('.slide-right-700').scrollSlide({
+				    direction   : 'right',
+				    scrollstart : 700
+				});
+        $('.slide-left-800').scrollSlide({
+				    direction   : 'right',
+				    scrollstart : 800
+				});$('.slide-right-800').scrollSlide({
+				    direction   : 'right',
+				    scrollstart : 800
+				});
+
+    		});
+    </script>
+
+
+
+
+
   </head>
   <body>
-    <header>
+    <header id="home">
       <nav id="nav">
         <p>Peter Stone</p>
         <ul class="nav-bar">
-          <li><a href="#home">Home</a></li>
+          <li><a href="#top">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
+
 
     <div class="intro">
       <h1 class="intro-header">Welcome to my Portfolio!</h1>
@@ -26,10 +140,10 @@
     </div>
 
     <main>
-      <div class="about" id="about">
-        <h2>About Me</h2>
-        <img class="profile-pic" src="images/profile-pic.jpg" alt="profile-image">
-        <p class="about-me-text">My name is Peter Stone and I live in the Pacific
+      <div class="about " id="about">
+        <h2 class="slide-left-0">About Me</h2>
+        <img class="profile-pic slide-right-0" src="images/profile-pic.jpg" alt="profile-image">
+        <p class="about-me-text slide-left-50">My name is Peter Stone and I live in the Pacific
         Northwest in the small town of Centralia, Washington. <i>(the central hub
         between Portland and Seattle)</i> I recently finished studying and course
         work for the 'Front-End Web Development' Tech Degree program through Treehouse,
@@ -173,54 +287,54 @@
 
 
       <div class="portfolio" id="portfolio">
-          <h2>Portfolio</h2>
+          <h2 class="slide-right-300">Portfolio</h2>
         <div class="card-list">
 
-          <div class="card" title="blog">
+          <div class="card slide-left-400" title="blog">
             <img class="project-image" src="images/blogimage.jpg" alt="blog-image">
           </div>
 
-          <div class="card" title="project-eleven">
+          <div class="card slide-down-400" title="project-eleven">
             <img class="project-image" src="images/projecteleven.jpg" alt="project-eleven-image">
           </div>
 
-          <div class="card" title="project-ten">
+          <div class="card slide-right-400" title="project-ten">
             <img class="project-image" src="images/projectten.jpg" alt="project-ten-image">
           </div>
 
-          <div class="card" title="project-nine">
+          <div class="card slide-left-500" title="project-nine">
             <img class="project-image" src="images/projectnine.jpg" alt="project-nine-image">
           </div>
 
-          <div class="card" title="project-eight">
+          <div class="card slide-down-500" title="project-eight">
             <img class="project-image" src="images/projecteight.jpg" alt="project-eight-image">
           </div>
 
-          <div class="card" title="project-seven">
+          <div class="card slide-right-500" title="project-seven">
             <img class="project-image" src="images/projectseven.jpg" alt="project-seven-image">
           </div>
 
-          <div class="card" title="project-six">
+          <div class="card slide-left-600" title="project-six">
             <img class="project-image" src="images/projectsix.jpg" alt="project-six-image">
           </div>
 
-          <div class="card" title="project-five">
+          <div class="card slide-down-600" title="project-five">
             <img class="project-image" src="images/projectfive.jpg" alt="project-five-image">
           </div>
 
-          <div class="card" title="project-four">
+          <div class="card slide-right-600" title="project-four">
             <img class="project-image" src="images/projectfour.jpg" alt="project-four-image">
           </div>
 
-          <div class="card" title="project-three">
+          <div class="card slide-left-700" title="project-three">
             <img class="project-image" src="images/projectthree.jpg" alt="project-three-image">
           </div>
 
-          <div class="card" title="project-two">
+          <div class="card slide-down-700" title="project-two">
             <img class="project-image" src="images/projecttwo.jpg" alt="project-two-image">
           </div>
 
-          <div class="card" title="project-one">
+          <div class="card slide-right-700" title="project-one">
             <img class="project-image" src="images/projectone.jpg" alt="project-one-image">
 
           </div>
@@ -240,10 +354,10 @@
     </main>
 
     <aside class="contact" id="contact">
-      <h2>Contact</h2>
-      <p>Thanks for visiting! I am available for full-time work, freelance work, and relocation.</p>
+      <h2 class="slide-left-800">Contact</h2>
+      <p class="slide-right-800">Thanks for visiting! I am available for full-time work, freelance work, and relocation.</p>
 
-      <ul class="contact-list">
+      <ul class="contact-list slide-left">
         <li class="contact-item"><p>Email</p><a href="mailto:petejstoney@gmail.com?subject=Hey%20There!">petejstoney@gmail.com</a></li>
         <li class="contact-item"><p>Phone</p><a href="tel:1-360-304-1878">
                           1-360-304-1878</a></li>
@@ -252,14 +366,23 @@
       </ul>
     </aside>
 
-    <footer>
-
-    </footer>
 
     </div>
-    <script src="js/main.js">
 
-    </script>
+    <footer class="slide-left">
+      <ul class="social-nav slide-left">
+        <li><a class="icon-facebook "href="http://www.facebook.com/petros777" target="_blank"></a></li>
+        <li><a class="icon-linkedin" href="https://www.linkedin.com/in/peter-stone-253415149/" target="_blank"></a></li>
+        <li><a class="icon-github" href="http://www.github.com/petejstone" target="_blank"></a></li>
+        <li><a class="icon-instagram" href="http://www.instagram.com/petros777" target="_blank"></a></li>
+      </ul>
+    </footer>
+
+    <script src="js/main.js"></script>
+
+
+
+
 
 
   </body>

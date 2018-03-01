@@ -1,7 +1,16 @@
 .intro,
 main {
-  margin: 0 1em;
+
   margin-top: 2em;
+}
+
+.intro {
+  height: 20em;
+  background-color: lighten(rgba(34, 34, 34, .4), 80%);
+  border-radius: 15px;
+  @include flexy(flex, column) {
+    justify-content: center;
+  }
 }
 
 .intro-header {
@@ -59,4 +68,15 @@ h2 {
   & > p:nth-child(2n+1) {
   font-weight: $font-weight--bold;
  }
+}
+
+.social-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 2em;
+  padding: 0;
+  max-width: 800px;
 }
