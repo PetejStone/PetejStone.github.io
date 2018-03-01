@@ -5,11 +5,14 @@ const modalCard = document.getElementsByClassName('modal-card');
 const card = document.getElementsByClassName('card');
 const leftArrow = document.getElementById('left-arrow');
 const rightArrow = document.getElementById('right-arrow');
-const closeButton = document.querySelector('.close-button');
+const closeButton = document.querySelectorAll('.close-button');
+const modalList = document.querySelector('.modal-list');
+const all = document.getElementsByTagName('*');
 let counter = 0;
 
-//media query variables
 
+
+//media query variables
 
 //sticky nav
 window.onscroll = function() {myFunction()};
@@ -38,14 +41,20 @@ function myFunction() {
 //Modal Overlay appear on click
 
 for (let i=0; i<card.length; i+=1) { //loops through card list
-
   card[i].addEventListener('click', (e)=> {
     counter += i;  //counter is set to the index value of the card clicked
     console.log(counter);
     overlay.style.display = "flex";   //when clicked, overlay modal appears
+
     modalCard[counter].style.display = 'flex'; //--
-    modalCard[i].classList.add('center');
-    modalCard[i].insertAdjacentHTML('afterbegin','<p class="close-button">x</p>');
+    modalCard[counter].classList.add('center');
+    // modalCard[counter].children[0].innerHTML = "close";
+    modalCard[counter].insertAdjacentHTML('beforebegin', '<p class="close">close</p>');
+
+    if (counter !==0 || counter !==modalCard.length) {
+      leftArrow.className ='active';
+      rightArrow.className = 'active';
+    }
 
     if (modalCard[counter].previousElementSibling !== null)  { //if a previous sibling exists, display it offscreen to the left
       modalCard[counter].previousElementSibling.style.display = 'flex';
@@ -69,6 +78,7 @@ for (let i=0; i<card.length; i+=1) { //loops through card list
 
 
 
+
 ///////ARROW FUNCTIONALITY///////
     if (i===0) {
       leftArrow.className = 'disabled'; //if the card clicked is the first child, set left arrow to disabled
@@ -81,8 +91,9 @@ for (let i=0; i<card.length; i+=1) { //loops through card list
 
         leftArrow.addEventListener('click', ()=> {
           rightArrow.className = 'active'; //when the left arrow is clicked, reactivate the right button
-          counter += -1;
+
           console.log(counter);
+
           if (counter === 0) {
             leftArrow.className = 'disabled'; //if the index value is 0 (the first element), then reset the left arrow to disabled
           }
@@ -93,13 +104,13 @@ for (let i=0; i<card.length; i+=1) { //loops through card list
           //
           // // Current Card slides to the right partial view
           modalCard[counter + 1].classList.remove('center');//current slide move right ///   2
-          modalCard[counter + 1].children[0].classList.remove('close-button');
+          modalCard[counter + 1].children[0].innerHTML = '';
           modalCard[counter + 1].classList.add('right-cards');//current slide move right ///   2
 
           // Current Left Card slides to center and class is removed
           modalCard[counter].classList.remove('left-cards'); /// 1
           modalCard[counter].classList.add('center'); //current left slide move to center
-          modalCard[counter].insertAdjacentHTML('afterbegin','<p class="close-button">x</p>');
+          modalCard[counter].children[0].innerHTML = 'close';
           // New Card appears in partial view to the left
           modalCard[counter].previousElementSibling ? modalCard[counter].previousElementSibling.classList.remove('offscreen-left') : null;
           modalCard[counter].previousElementSibling ? modalCard[counter].previousElementSibling.classList.add('left-cards') : null ;
@@ -114,7 +125,8 @@ for (let i=0; i<card.length; i+=1) { //loops through card list
 
         rightArrow.addEventListener('click', ()=> {
           leftArrow.className = 'active';//reactivate left arrow when right arrow is clicked
-          counter += 1;
+
+          console.log(counter)
           if (counter === modalCard.length -1) {
             rightArrow.className = 'disabled'; //if the index value is the last child,  then reset the right arrow to disabled
           }
@@ -124,13 +136,15 @@ for (let i=0; i<card.length; i+=1) { //loops through card list
           //
           // // Current Card slides to the left partial view
           modalCard[counter - 1].classList.remove('center');//current slide move right ///   2
-          modalCard[counter - 1].children[0].classList.remove('close-button');
+          modalCard[counter - 1].children[0].innerHTML = '';
           modalCard[counter - 1].classList.add('left-cards');//current slide move right ///   2
+
 
           // Current Right Card slides to center and class is removed
           modalCard[counter].classList.remove('right-cards'); /// 1
           modalCard[counter].classList.add('center'); //current left slide move to center
-          modalCard[counter].insertAdjacentHTML('afterbegin','<p class="close-button">x</p>');
+          modalCard[counter].children[0].innerHTML = 'close';
+
 
           // New Card appears in partial view to the right
           modalCard[counter].nextElementSibling ? modalCard[counter].nextElementSibling.classList.remove('offscreen-right') : null;
@@ -140,8 +154,40 @@ for (let i=0; i<card.length; i+=1) { //loops through card list
           //New Card appears offscreen-right
           modalCard[counter].nextElementSibling.nextElementSibling ? modalCard[counter].nextElementSibling.nextElementSibling.style.display = 'flex' : null ;
           modalCard[counter].nextElementSibling.nextElementSibling ? modalCard[counter].nextElementSibling.nextElementSibling.classList.add('offscreen-right') : null;
+
+
         });
 
 
+
+
 });
+
+counter = 0;
 }/////End of For Loop
+
+//close button functionality
+
+for (i=0; i<modalCard.length; i+=1) {
+closeButton[i].addEventListener('click', () => {
+  overlay.style.display = 'none';
+  modalCard[counter].children[0].innerHTML = '';
+  counter = 0;
+  console.log(counter);
+  for (i=0; i < modalCard.length; i+=1) {
+    modalCard[i].classList.remove('offscreen-right', 'offscreen-left', 'center', 'left-cards', 'right-cards');
+    modalCard[i].style.display = 'none';
+
+
+  }
+
+});
+}
+
+rightArrow.addEventListener('click',()=> {
+  counter += 1;
+});
+
+leftArrow.addEventListener('click', () => {
+  counter += -1;
+})
