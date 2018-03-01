@@ -48,8 +48,7 @@ for (let i=0; i<card.length; i+=1) { //loops through card list
 
     modalCard[counter].style.display = 'flex'; //--
     modalCard[counter].classList.add('center');
-    // modalCard[counter].children[0].innerHTML = "close";
-    modalCard[counter].insertAdjacentHTML('beforebegin', '<p class="close">close</p>');
+    modalCard[counter].children[0].innerHTML = "close";
 
     if (counter !==0 || counter !==modalCard.length) {
       leftArrow.className ='active';

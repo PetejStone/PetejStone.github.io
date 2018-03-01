@@ -133,18 +133,10 @@
 }
 
 .close-button {
-  width: 100%;
-  color: $white;
+  width: 3em;
+  color: #fff;
   text-align: center;
-  transform: translate(-22%, -325%);
+  transform: translate(0%, -350%);
   text-decoration: underline;
-  @include mq(small) {
-    transform: translate(0%, -325%);
-  }
-  @include mq(medium) {
-    transform: translate(0%, -325%);
-  }
-  @include mq(large) {
-    transform: translate(0%, -325%);
-  }
+  cursor: pointer;
 }

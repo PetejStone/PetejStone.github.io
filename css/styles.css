@@ -626,19 +626,11 @@ h2 {
   transform: translate(-50%, -50%); }
 
 .close-button {
-  width: 100%;
+  width: 3em;
   color: #fff;
   text-align: center;
-  transform: translate(-22%, -325%);
-  text-decoration: underline; }
-  @media (min-width: 500px) {
-    .close-button {
-      transform: translate(0%, -325%); } }
-  @media (min-width: 750px) {
-    .close-button {
-      transform: translate(0%, -325%); } }
-  @media (min-width: 950px) {
-    .close-button {
-      transform: translate(0%, -325%); } }
+  transform: translate(0%, -350%);
+  text-decoration: underline;
+  cursor: pointer; }
 
 /*# sourceMappingURL=styles.css.map */
