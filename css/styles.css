@@ -426,6 +426,12 @@ nav {
   .nav-bar > li a {
     color: #fff;
     padding: 0 1em; }
+    .nav-bar > li a:hover {
+      color: #9aff9a;
+      transition: all .1s; }
+  .nav-bar > li:hover {
+    transform: scale(1.07);
+    transition: all .1s; }
 
 .sticky {
   position: fixed;
@@ -503,6 +509,9 @@ h2 {
   text-align: center; }
   .contact-item > p:nth-child(2n+1) {
     font-weight: 700; }
+
+.contact-info {
+  color: cornflowerblue; }
 
 .social-nav {
   display: flex;

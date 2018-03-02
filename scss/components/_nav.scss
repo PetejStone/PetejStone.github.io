@@ -19,12 +19,18 @@ nav {
 
 .nav-bar {
   @include flexy(flex,row);
-
   padding: 0;
   & >li a {
     color: $white;
     padding: 0 1em;
-
+    &:hover {
+      color: lighten(green, 55%);
+      transition: all .1s;
+    }
+  }
+  & >li:hover{
+    transform: scale(1.07);
+    transition: all .1s;
   }
 
 }
