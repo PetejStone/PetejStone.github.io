@@ -576,14 +576,14 @@ h2 {
   font-size: 5em;
   background-color: #000;
   opacity: 0;
-  z-index: 55; }
+  z-index: 55;
+  transition: all .5s; }
 
 .modal-card {
   position: fixed;
   background-color: #fff;
   border-radius: 10px;
   border: 5px solid #7DD4A1;
-  display: fixed;
   flex-direction: column;
   align-items: flex-start;
   align-items: center;
