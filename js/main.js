@@ -6,8 +6,6 @@ const card = document.getElementsByClassName('card');
 const leftArrow = document.getElementById('left-arrow');
 const rightArrow = document.getElementById('right-arrow');
 const closeButton = document.querySelectorAll('.close-button');
-const modalList = document.querySelector('.modal-list');
-const all = document.getElementsByTagName('*');
 let counter = 0;
 
 
@@ -15,22 +13,22 @@ let counter = 0;
 //media query variables
 
 //sticky nav
-window.onscroll = function() {myFunction()};
+window.onscroll = function() {myFunction();};
 
 let sticky = nav.offsetTop;
 
 function myFunction() {
   if (window.pageYOffset >= sticky) {
-    nav.classList.add("sticky")
-    nav.style.maxWidth = "1200px"
-    nav.style.marginTop = 0
-    intro.style.marginTop = "6em"
+    nav.classList.add("sticky");
+    nav.style.maxWidth = "1200px";
+    nav.style.marginTop = 0;
+    intro.style.marginTop = "6em";
 
 
   } else {
-    nav.classList.remove("sticky")
-    intro.style.marginTop = "2em"
-    nav.style.marginTop = "1em"
+    nav.classList.remove("sticky");
+    intro.style.marginTop = "2em";
+    nav.style.marginTop = "1em";
 
   }
 }
@@ -45,7 +43,7 @@ for (let i=0; i<card.length; i+=1) { //loops through card list
     counter += i;  //counter is set to the index value of the card clicked
     console.log(counter);
     overlay.style.display = "flex";   //when clicked, overlay modal appears
-    overlay.style.opacity = .75;
+    overlay.style.opacity = 0.75;
     overlay.style.transition = 'opacity .3s ease-in 3s';
     modalCard[counter].style.display = 'flex'; //--
     modalCard[counter].classList.add('center');
@@ -71,7 +69,7 @@ for (let i=0; i<card.length; i+=1) { //loops through card list
       modalCard[counter].nextElementSibling.classList.add('right-cards'); //right screen placement
       if (modalCard[counter].nextElementSibling.nextElementSibling !==null) {
         modalCard[counter].nextElementSibling.nextElementSibling.style.display = 'flex';
-        modalCard[counter].nextElementSibling.nextElementSibling.classList.add('offscreen-right')
+        modalCard[counter].nextElementSibling.nextElementSibling.classList.add('offscreen-right');
       }
     }
 
@@ -117,7 +115,7 @@ for (let i=0; i<card.length; i+=1) { //loops through card list
 
 
           //New Card appears offscreen-left
-          modalCard[counter].previousElementSibling.previousElementSibling ? modalCard[counter].previousElementSibling.previousElementSibling.style.display = 'flex' : null
+          modalCard[counter].previousElementSibling.previousElementSibling ? modalCard[counter].previousElementSibling.previousElementSibling.style.display = 'flex' : null;
           modalCard[counter].previousElementSibling.previousElementSibling ? modalCard[counter].previousElementSibling.previousElementSibling.classList.add('offscreen-left') : null;
 
         });
@@ -126,7 +124,7 @@ for (let i=0; i<card.length; i+=1) { //loops through card list
         rightArrow.addEventListener('click', ()=> {
           leftArrow.className = 'active';//reactivate left arrow when right arrow is clicked
 
-          console.log(counter)
+          console.log(counter);
           if (counter === modalCard.length -1) {
             rightArrow.className = 'disabled'; //if the index value is the last child,  then reset the right arrow to disabled
           }
@@ -171,7 +169,7 @@ counter = 0;
 for (i=0; i<modalCard.length; i+=1) {
 closeButton[i].addEventListener('click', () => {
   overlay.style.display = 'none';
-  overlay.style.opacity = .75;
+  overlay.style.opacity = 0.75;
 
   modalCard[counter].children[0].innerHTML = '';
   counter = 0;
@@ -192,7 +190,7 @@ rightArrow.addEventListener('click',()=> {
 
 leftArrow.addEventListener('click', () => {
   counter += -1;
-})
+});
 
 ///
 
