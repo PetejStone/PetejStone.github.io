@@ -193,3 +193,9 @@ rightArrow.addEventListener('click',()=> {
 leftArrow.addEventListener('click', () => {
   counter += -1;
 })
+
+///
+
+document.addEventListener("DOMContentLoaded", function() {
+  window.scrollTo(0,1);
+});

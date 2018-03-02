@@ -37,3 +37,61 @@
 	};
 
 }(jQuery));
+
+
+
+if ($(window).width() > 950 && $(window).width() < 1400) {
+  $(document).ready(function(){
+        $('.slide-left-0').scrollSlide({
+            direction   : 'left',
+            scrollstart : 0,
+            speed       : 500
+        });
+
+        $('.slide-right-0').scrollSlide({
+            direction   : 'right',
+            scrollstart : 0,
+            speed       : 500
+        });
+
+        $('.slide-left-50').scrollSlide({
+            direction   : 'left',
+            scrollstart : 200,
+            speed       : 500
+        });
+
+        $('.slide-right-200').scrollSlide({
+            direction   : 'right',
+            scrollstart : 200,
+            speed       : 500
+        });
+
+        $('.slide-right-300').scrollSlide({
+            direction   : 'right',
+            scrollstart : 300,
+            speed       : 500
+        });
+
+        $('.slide-left-400').scrollSlide({
+            direction   : 'left',
+            scrollstart : 350,
+            speed       : 500
+        });
+        $('.slide-left-500').scrollSlide({
+            direction   : 'left',
+            scrollstart : 500,
+            speed       : 500
+        });
+        $('.slide-left-900').scrollSlide({
+            direction   : 'left',
+            scrollstart : 900,
+            speed       : 500
+        });
+        $('.slide-right-900').scrollSlide({
+            direction   : 'right',
+            scrollstart : 900,
+            speed       : 500
+        });
+
+      });
+}
