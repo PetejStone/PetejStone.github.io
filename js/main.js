@@ -10,7 +10,7 @@ let counter = 0;
 
 
 
-//media query variables
+
 
 //sticky nav
 window.onscroll = function() {myFunction();};
@@ -36,20 +36,20 @@ function myFunction() {
 
 
 
-//Modal Overlay appear on click
+//Modal Overlay appears on click
 
 for (let i=0; i<card.length; i+=1) { //loops through card list
   card[i].addEventListener('click', (e)=> {
     counter += i;  //counter is set to the index value of the card clicked
     console.log(counter);
     overlay.style.display = "flex";   //when clicked, overlay modal appears
-    overlay.style.opacity = 0.75;
+    overlay.style.opacity = 0.75; //sets opacity of overlay
     overlay.style.transition = 'opacity .3s ease-in 3s';
-    modalCard[counter].style.display = 'flex'; //--
-    modalCard[counter].classList.add('center');
-    modalCard[counter].children[0].innerHTML = "close";
+    modalCard[counter].style.display = 'flex'; //--set display of modal
+    modalCard[counter].classList.add('center'); //sets the class of the card clicked to the 'center class' stylings'
+    modalCard[counter].children[0].innerHTML = "close"; //adds innerHTML of 'close' then translates it outside the modal-card as a close button
 
-    if (counter !==0 || counter !==modalCard.length) {
+    if (counter !==0 || counter !==modalCard.length) {//If the card clicked is not the first or last child, display both arrows
       leftArrow.className ='active';
       rightArrow.className = 'active';
     }
@@ -57,9 +57,9 @@ for (let i=0; i<card.length; i+=1) { //loops through card list
     if (modalCard[counter].previousElementSibling !== null)  { //if a previous sibling exists, display it offscreen to the left
       modalCard[counter].previousElementSibling.style.display = 'flex';
       modalCard[counter].previousElementSibling.classList.add('left-cards'); //left screen placement
-        if (modalCard[counter].previousElementSibling.previousElementSibling !==null) {
+        if (modalCard[counter].previousElementSibling.previousElementSibling !==null) {//if two previous siblings exists...
           modalCard[counter].previousElementSibling.previousElementSibling.style.display = 'flex';
-          modalCard[counter].previousElementSibling.previousElementSibling.classList.add('offscreen-left');
+          modalCard[counter].previousElementSibling.previousElementSibling.classList.add('offscreen-left');//if two previous exists, add 'offscreen-left' class' stylings
       }
     }
 
@@ -69,7 +69,7 @@ for (let i=0; i<card.length; i+=1) { //loops through card list
       modalCard[counter].nextElementSibling.classList.add('right-cards'); //right screen placement
       if (modalCard[counter].nextElementSibling.nextElementSibling !==null) {
         modalCard[counter].nextElementSibling.nextElementSibling.style.display = 'flex';
-        modalCard[counter].nextElementSibling.nextElementSibling.classList.add('offscreen-right');
+        modalCard[counter].nextElementSibling.nextElementSibling.classList.add('offscreen-right');//if two previous exists, add 'offscreen-right' class' stylings
       }
     }
 
@@ -96,7 +96,7 @@ for (let i=0; i<card.length; i+=1) { //loops through card list
             leftArrow.className = 'disabled'; //if the index value is 0 (the first element), then reset the left arrow to disabled
           }
 
-          // Current Right Card sides out of view to the right
+          // Current Right Card slides out of view to the right
           modalCard[counter + 1].nextElementSibling ? modalCard[counter + 1].nextElementSibling.classList.remove('right-cards') : null;
           modalCard[counter + 1].nextElementSibling ? modalCard[counter + 1].nextElementSibling.classList.add('offscreen-right') : null;
           //
@@ -108,7 +108,8 @@ for (let i=0; i<card.length; i+=1) { //loops through card list
           // Current Left Card slides to center and class is removed
           modalCard[counter].classList.remove('left-cards'); /// 1
           modalCard[counter].classList.add('center'); //current left slide move to center
-          modalCard[counter].children[0].innerHTML = 'close';
+          modalCard[counter].children[0].innerHTML = 'close';//adds the text 'close' to the new display card
+
           // New Card appears in partial view to the left
           modalCard[counter].previousElementSibling ? modalCard[counter].previousElementSibling.classList.remove('offscreen-left') : null;
           modalCard[counter].previousElementSibling ? modalCard[counter].previousElementSibling.classList.add('left-cards') : null ;
@@ -141,7 +142,7 @@ for (let i=0; i<card.length; i+=1) { //loops through card list
           // Current Right Card slides to center and class is removed
           modalCard[counter].classList.remove('right-cards'); /// 1
           modalCard[counter].classList.add('center'); //current left slide move to center
-          modalCard[counter].children[0].innerHTML = 'close';
+          modalCard[counter].children[0].innerHTML = 'close';//current card has 'close' text added for close button
 
 
           // New Card appears in partial view to the right
@@ -172,10 +173,10 @@ closeButton[i].addEventListener('click', () => {
   overlay.style.opacity = 0.75;
 
   modalCard[counter].children[0].innerHTML = '';
-  counter = 0;
+  counter = 0;//reset counter to zero so modal can start up again with proper index
   console.log(counter);
   for (i=0; i < modalCard.length; i+=1) {
-    modalCard[i].classList.remove('offscreen-right', 'offscreen-left', 'center', 'left-cards', 'right-cards');
+    modalCard[i].classList.remove('offscreen-right', 'offscreen-left', 'center', 'left-cards', 'right-cards');//remove ALL added classes so they can all restart from default when modal pops up again
     modalCard[i].style.display = 'none';
 
 
@@ -185,15 +186,15 @@ closeButton[i].addEventListener('click', () => {
 }
 
 rightArrow.addEventListener('click',()=> {
-  counter += 1;
+  counter += 1;//Add one to 'counter' when clicked
 });
 
 leftArrow.addEventListener('click', () => {
-  counter += -1;
+  counter += -1;//subtract one from 'counter' when clicked
 });
 
 ///
 
 document.addEventListener("DOMContentLoaded", function() {
-  window.scrollTo(0,1);
+  window.scrollTo(0,1); //when page loads, default down to the '1' scroll position on Y axis so the scrollSlide plug can slide in first content
 });
