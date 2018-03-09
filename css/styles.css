@@ -539,6 +539,17 @@ h2 {
     .calling-card {
       display: none; } }
 
+#noscript {
+  border: 3px solid #000;
+  border-radius: 15px;
+  padding: 2em;
+  margin: 1em; }
+
+.no-js-notice {
+  background-color: #FF0000;
+  color: #fff;
+  text-align: center; }
+
 .profile-pic {
   width: 35%;
   height: auto;

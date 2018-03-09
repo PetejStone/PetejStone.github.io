@@ -104,3 +104,18 @@ h2 {
     display: none;
   }
 }
+
+//
+#noscript {
+  border: 3px solid $black;
+  border-radius: 15px;
+  padding: 2em;
+  margin: 1em;
+
+}
+
+.no-js-notice {
+  background-color: $red;
+  color: $white;
+  text-align: center;
+}

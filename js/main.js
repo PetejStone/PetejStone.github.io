@@ -188,6 +188,7 @@ closeButton[i].addEventListener('click', () => {
 
 });
 }
+//Arrow functionity for Modal
 
 rightArrow.addEventListener('click',()=> {
   counter += 1;//Add one to 'counter' when clicked
@@ -202,3 +203,6 @@ leftArrow.addEventListener('click', () => {
 document.addEventListener("DOMContentLoaded", function() {
   window.scrollTo(0,1); //when page loads, default down to the '1' scroll position on Y axis so the scrollSlide plug can slide in first content
 });
+//end arrow functionity
+
+//
