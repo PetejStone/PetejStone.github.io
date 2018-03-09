@@ -49,6 +49,7 @@ for (let i=0; i<card.length; i+=1) { //loops through card list
     modalCard[counter].style.display = 'flex'; //--set display of modal
     modalCard[counter].classList.add('center'); //sets the class of the card clicked to the 'center class' stylings'
     modalCard[counter].children[0].innerHTML = "close"; //adds innerHTML of 'close' then translates it outside the modal-card as a close button
+    modalCard[counter].style.paddingTop = "0px"//removes added 'padding'
 
     if (counter !==0 || counter !==modalCard.length) {//If the card clicked is not the first or last child, display both arrows
       leftArrow.className ='active';
@@ -105,11 +106,13 @@ for (let i=0; i<card.length; i+=1) { //loops through card list
           modalCard[counter + 1].classList.remove('center');//current slide move right ///   2
           modalCard[counter + 1].children[0].innerHTML = '';
           modalCard[counter + 1].classList.add('right-cards');//current slide move right ///   2
+          modalCard[counter + 1].style.paddingTop = '1em'; //resets old padding
 
           // Current Left Card slides to center and class is removed
           modalCard[counter].classList.remove('left-cards'); /// 1
           modalCard[counter].classList.add('center'); //current left slide move to center
           modalCard[counter].children[0].innerHTML = 'close';//adds the text 'close' to the new display card
+          modalCard[counter].style.paddingTop = '0px'//removes added padding
 
           // New Card appears in partial view to the left
           modalCard[counter].previousElementSibling ? modalCard[counter].previousElementSibling.classList.remove('offscreen-left') : null;
@@ -138,13 +141,13 @@ for (let i=0; i<card.length; i+=1) { //loops through card list
           modalCard[counter - 1].classList.remove('center');//current slide move right ///   2
           modalCard[counter - 1].children[0].innerHTML = '';
           modalCard[counter - 1].classList.add('left-cards');//current slide move right ///   2
-
+          modalCard[counter - 1].style.paddingTop = '1em'//resets old padding
 
           // Current Right Card slides to center and class is removed
           modalCard[counter].classList.remove('right-cards'); /// 1
           modalCard[counter].classList.add('center'); //current left slide move to center
           modalCard[counter].children[0].innerHTML = 'close';//current card has 'close' text added for close button
-
+          modalCard[counter].style.paddingTop = '0px'//removes added padding
 
           // New Card appears in partial view to the right
           modalCard[counter].nextElementSibling ? modalCard[counter].nextElementSibling.classList.remove('offscreen-right') : null;

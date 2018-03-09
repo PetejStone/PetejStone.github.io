@@ -699,9 +699,10 @@ h2 {
   width: 3em;
   color: #fff;
   text-align: center;
-  transform: translate(0%, -350%);
+  transform: translate(0%, -200%);
   text-decoration: underline;
-  cursor: pointer; }
+  cursor: pointer;
+  margin: 0; }
 
 [class^=icon-] {
   display: block;
