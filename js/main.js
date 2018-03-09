@@ -106,7 +106,7 @@ for (let i=0; i<card.length; i+=1) { //loops through card list
           modalCard[counter + 1].classList.remove('center');//current slide move right ///   2
           modalCard[counter + 1].children[0].innerHTML = '';
           modalCard[counter + 1].classList.add('right-cards');//current slide move right ///   2
-          modalCard[counter + 1].style.paddingTop = '1em'; //resets old padding
+          modalCard[counter + 1].style.paddingTop = '17px'; //resets old padding
 
           // Current Left Card slides to center and class is removed
           modalCard[counter].classList.remove('left-cards'); /// 1
@@ -141,7 +141,7 @@ for (let i=0; i<card.length; i+=1) { //loops through card list
           modalCard[counter - 1].classList.remove('center');//current slide move right ///   2
           modalCard[counter - 1].children[0].innerHTML = '';
           modalCard[counter - 1].classList.add('left-cards');//current slide move right ///   2
-          modalCard[counter - 1].style.paddingTop = '1em'//resets old padding
+          modalCard[counter - 1].style.paddingTop = '17px'//resets old padding
 
           // Current Right Card slides to center and class is removed
           modalCard[counter].classList.remove('right-cards'); /// 1
