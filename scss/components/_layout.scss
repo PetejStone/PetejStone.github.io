@@ -90,3 +90,17 @@ h2 {
   max-width: 800px;
 
 }
+
+.calling-card {
+  margin: 0;
+  background-color: rgba(0,0,0,.6);
+  color: $white;
+  font-weight: $font-weight--thin;
+  border-radius: 0 0 10px 10px;
+  padding: 3px;
+  transform: translateY(-100%);
+  margin-bottom: -24px;
+  @include mq(small){
+    display: none;
+  }
+}

@@ -526,6 +526,19 @@ h2 {
   padding: 0;
   max-width: 800px; }
 
+.calling-card {
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-weight: 100;
+  border-radius: 0 0 10px 10px;
+  padding: 3px;
+  transform: translateY(-100%);
+  margin-bottom: -24px; }
+  @media (min-width: 500px) {
+    .calling-card {
+      display: none; } }
+
 .profile-pic {
   width: 35%;
   height: auto;

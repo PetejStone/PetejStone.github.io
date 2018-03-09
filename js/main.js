@@ -39,6 +39,7 @@ function myFunction() {
 //Modal Overlay appears on click
 
 for (let i=0; i<card.length; i+=1) { //loops through card list
+  card[i].insertAdjacentHTML('beforeend','<p class="calling-card">tap for more info!</p>');
   card[i].addEventListener('click', (e)=> {
     counter += i;  //counter is set to the index value of the card clicked
     console.log(counter);
