@@ -6,6 +6,7 @@
   @extend %center;
   border-radius: 50%;
   max-width: 900px;
+  margin-bottom: 1em;
 
 }
 
@@ -15,4 +16,14 @@
   @extend %center;
   border-radius: 10px;
 
+}
+
+.techdegree {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  max-width: 480px;
+  max-height: 369px;
+  margin-top: 1em;
+  margin-bottom: 2em;
 }
