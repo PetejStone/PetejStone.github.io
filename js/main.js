@@ -8,7 +8,9 @@ const rightArrow = document.getElementById('right-arrow');
 const closeButton = document.querySelectorAll('.close-button');
 let counter = 0;
 
-
+$(window).on('load',function(){
+   $('.loader').fadeOut();
+});
 
 
 
