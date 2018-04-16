@@ -34,6 +34,7 @@ h2 {
   align-items: center;
   width: 90%;
   @extend %center;
+  margin-bottom: 2em;
 }
 
 .card {
@@ -118,25 +119,4 @@ h2 {
   background-color: $red;
   color: $white;
   text-align: center;
-}
-
-
-
-.loader {
-	position: fixed;
-	left: 0px;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 9999;
-	background: $white;
-}
-  //centers the loading icon
-.lds-spin {
-    transform: scale(0.5);
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    margin-top: -75px;
-    margin-left: -75px;
 }
