@@ -5,7 +5,7 @@ main {
 }
 
 .intro {
-  height: 20em;
+  height: 15em;
   background-color: lighten(rgba(34, 34, 34, .4), 80%);
   border-radius: 15px;
   @include flexy(flex, column) {
