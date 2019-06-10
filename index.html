@@ -8,16 +8,19 @@
     <link rel="stylesheet" href="css/styles.css">
 
 
-    <noscript>
-      <div id="noscript">
-        <h4 class="no-js-notice">Notice!</h4>
-        <p>You Need JavaScript to access this site's functionality!</p>
-      </div>
-    </noscript>
+    
 
 
   </head>
+  
   <body>
+      <noscript>
+          <div id="noscript">
+            <h4 class="no-js-notice">Notice!</h4>
+            <p>You Need JavaScript to access this site's functionality!</p>
+          </div>
+        </noscript>
+
     <header id="home">
       <nav id="nav">
         <p>Peter Stone</p>
@@ -45,7 +48,8 @@
         <img class="profile-pic slide-right-0" src="images/mainpic.jpg" alt="profile-image">
         <p class="about-me-text slide-left-50">My name is Peter Stone and I live in the Pacific
         Northwest in the small town of Centralia, Washington. <i>(the central hub
-        between Portland and Seattle)</i> Apart from blogging and web development,
+        between Portland and Seattle)</i> I am now a full time student at Lambda School
+        studying Full Stack Web Development.  Apart from blogging and web development,
         I enjoy acting, the theatre, and traveling.  Have a peek at some of my
         projects! Cheers!
        </p>
@@ -68,6 +72,17 @@
 
 
       <div class="modal-list" >
+
+          <div class="modal-card" style="display:none;" title="Jane Austen">
+              <p class="close-button"></p>
+              <img class="project-image" src="images/readingrecommender.jpg" alt="site-image">
+                <h3 class="project-title">Reading Recommender</h3>
+                <p class="modal-card-text">Worked as Front End on a Reading Recommender App which uses algorithms to return
+                  a book based on a quiz. Utilized React, Styled Components, and Axios.
+                </p>
+              <a href="https://reading-recommender.netlify.com/" target="_blank" class="site-link">Visit Site</a>
+              <a href="https://github.com/reading-recommender/reading-recommender-FE" target="_blank" class="site-link">View Source</a>
+            </div>
 
         <div class="modal-card" style="display:none;" title="Jane Austen">
           <p class="close-button"></p>
@@ -100,7 +115,7 @@
           <p class="close-button"></p>
           <img class="project-image" src="images/rosie-project.jpg" alt="site-image">
             <h3 class="project-title">Rosie's Pub and Periodic Fiddle Club</h3>
-            <p class="modal-card-text">Custom built a mockup site for a local artistic group. HTML, CSS and Javascript</p>
+            <p class="modal-card-text">Custom built a mockup site for a local artistic group. HTML, CSS, jQuery and Javascript</p>
           <a href="http://www.stonesquareddevelopment.com/rosie-project" target="_blank" class="site-link">Visit Site</a>
           <a href="https://github.com/PetejStone/rosie-project/tree/gh-pages" target="_blank" class="site-link">View Source</a>
         </div>
@@ -314,6 +329,10 @@
 
         <div class="card-list">
 
+            <div class="card" title="Reading Recommender">
+                <img class="project-image" src="images/readingrecommender.jpg" alt="Reading Recommender">
+              </div>
+
           <div class="card" title="Jane Austen">
             <img class="project-image" src="images/jane-austen.jpg" alt="Jane Austen">
           </div>
@@ -439,10 +458,10 @@
 
     <footer>
       <ul class="social-nav">
-        <li><a class="icon-facebook" href="http://www.facebook.com/petros777" target="_blank"></a></li>
+        <li><a class="icon-facebook" href="http://www.facebook.com/stonesquareddevelopment" target="_blank"></a></li>
         <li><a class="icon-linkedin" href="https://www.linkedin.com/in/peter-stone-253415149/" target="_blank"></a></li>
         <li><a class="icon-github" href="http://www.github.com/petejstone" target="_blank"></a></li>
-        <li><a class="icon-instagram" href="http://www.instagram.com/petros777" target="_blank"></a></li>
+        
       </ul>
 
       <p>&copy;2019 Stonesquared<sup>2</sup> Development</p>
