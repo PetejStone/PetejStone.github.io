@@ -457,12 +457,24 @@ main {
   margin-top: 2em; }
 
 .intro {
-  height: 20em;
+  height: 15em;
   background-color: rgba(238, 238, 238, 0.4);
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center; }
+
+.skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+  .skills * {
+    color: #fff;
+    background-color: #000;
+    padding: .5rem;
+    border-radius: 15px;
+    opacity: .8; }
 
 .intro-header {
   text-align: center; }
@@ -471,7 +483,8 @@ main {
   text-align: center; }
 
 .about-me-text {
-  margin: 0 1em; }
+  margin: 0 auto;
+  max-width: 800px; }
 
 h2 {
   text-align: center; }
@@ -553,7 +566,7 @@ h2 {
   margin: 1em; }
 
 .no-js-notice {
-  background-color: #FF0000;
+  background-color: #ff0000;
   color: #fff;
   text-align: center; }
 
@@ -627,7 +640,7 @@ h2 {
   position: fixed;
   background-color: #fff;
   border-radius: 10px;
-  border: 5px solid #7DD4A1;
+  border: 5px solid #7dd4a1;
   flex-direction: column;
   align-items: flex-start;
   align-items: center;
