@@ -466,7 +466,14 @@ main {
 
 .credentials {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  justify-content: space-around; }
+
+.lambda {
+  border-radius: 50%; }
+
+.aws {
+  border-radius: 40%; }
 
 .skills {
   display: flex;
@@ -591,7 +598,7 @@ h2 {
   display: block;
   margin: 0 auto;
   max-width: 100%;
-  max-height: 300px;
+  max-height: 250px;
   margin-top: 1em;
   margin-bottom: 2em; }
 
@@ -608,7 +615,8 @@ h2 {
     transform: scale(1);
     transition: transform ease-in-out;
     box-shadow: 3px 5px 7px #000; } }
-.card:hover {
+.card:hover,
+.techdegree:hover {
   animation: pulse .3s;
   box-shadow: 3px 5px 7px #000;
   z-index: 0; }
