@@ -40,8 +40,18 @@ main {
     border-radius: 15px;
     opacity: .8;
   }
+}
 
-
+.mini {
+  font-size: 12px;
+  width: 100%;
+  justify-content: center;
+   & p {
+    margin: 0px;
+    border-radius: 15px;
+    margin: 2px;
+    background-color: #7DD484;
+  }
 }
 
 .intro-header {

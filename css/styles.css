@@ -449,8 +449,8 @@ nav {
   display: block; }
 
 footer p {
-  font-size: 10px;
-  margin-top: 1.5em; }
+  font-size: 1rem;
+  margin-top: 2.5em; }
 
 .intro,
 main {
@@ -486,6 +486,16 @@ main {
     padding: .5rem;
     border-radius: 15px;
     opacity: .8; }
+
+.mini {
+  font-size: 12px;
+  width: 100%;
+  justify-content: center; }
+  .mini p {
+    margin: 0px;
+    border-radius: 15px;
+    margin: 2px;
+    background-color: #7DD484; }
 
 .intro-header {
   text-align: center; }
