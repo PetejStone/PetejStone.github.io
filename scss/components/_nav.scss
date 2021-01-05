@@ -1,6 +1,6 @@
 nav {
   @include flexy(flex,row);
-    background-color: #000;
+    background: linear-gradient(to right, #00c3e3,#03dfe5);
     opacity: .8;
     justify-content: space-around;
     color: $white;

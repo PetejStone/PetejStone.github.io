@@ -57,7 +57,7 @@ section {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
-  font-size: 2em;
+  font-size: 3em;
   margin: 0; }
 
 /* Grouping content
@@ -404,7 +404,7 @@ template {
 nav {
   display: flex;
   flex-direction: row;
-  background-color: #000;
+  background: linear-gradient(to right, #00c3e3, #03dfe5);
   opacity: .8;
   justify-content: space-around;
   color: #fff;
@@ -458,7 +458,6 @@ main {
 
 .intro {
   height: 15em;
-  background-color: rgba(238, 238, 238, 0.4);
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -482,7 +481,7 @@ main {
   flex-wrap: wrap; }
   .skills * {
     color: #fff;
-    background-color: #000;
+    background: linear-gradient(to right, #00c3e3, #03dfe5);
     padding: .5rem;
     border-radius: 15px;
     opacity: .8; }
@@ -506,7 +505,9 @@ main {
 .about-me-text {
   margin: 0 auto;
   max-width: 800px;
-  padding: 0px 10px; }
+  padding: 0px 10px;
+  line-height: 30px;
+  font-size: 1rem; }
 
 h2 {
   text-align: center; }
@@ -662,7 +663,7 @@ h2 {
   position: fixed;
   background-color: #fff;
   border-radius: 10px;
-  border: 5px solid #7dd4a1;
+  border: 5px solid #00c3e3;
   flex-direction: column;
   align-items: flex-start;
   align-items: center;

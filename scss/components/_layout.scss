@@ -6,7 +6,6 @@ main {
 
 .intro {
   height: 15em;
-  background-color: lighten(rgba(34, 34, 34, .4), 80%);
   border-radius: 15px;
   @include flexy(flex, column) {
     justify-content: center;
@@ -35,7 +34,7 @@ main {
   flex-wrap: wrap;
   & * {
     color: $white;
-    background-color: #000;
+    background: linear-gradient(to right, #00c3e3,#03dfe5);;
     padding: .5rem;
     border-radius: 15px;
     opacity: .8;
@@ -66,6 +65,8 @@ main {
   margin: 0 auto;
   max-width: 800px;
   padding: 0px 10px;
+  line-height: 30px;
+  font-size: 1rem;
 }
 
 h2 {
