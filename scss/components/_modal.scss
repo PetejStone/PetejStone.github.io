@@ -30,6 +30,8 @@
     top: 50%;
     width: 75%;
     max-width: 500px;
+    
+ 
 
     @include mq(small) {
       width: 60%;
