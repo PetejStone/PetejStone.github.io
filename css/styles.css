@@ -684,7 +684,12 @@ h2 {
       width: 40%; } }
 
 .modal-card-text {
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 0px; }
+
+.project-date {
+  font-size: 12px;
+  font-style: italic; }
 
 .arrow-container {
   display: flex;
